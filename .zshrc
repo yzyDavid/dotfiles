@@ -103,9 +103,10 @@ alias f='fuck'
 alias oppy='optirun python'
 #alias minecraft='java -jar ~/minecraft/HMCL-2.7.6.22.jar'
 
-alias yarn=tyarn
+# alias yarn=tyarn
 alias rm='rm -i'
-alias gacp='ga . && gc && gp'
+# alias gacp='ga . && gc && gp'
+alias em=emacs
 
 export VISUAL="vim"
 
@@ -123,7 +124,7 @@ export PATH=$PATH:/opt/cuda/bin
 export PATH=$PATH:/opt/MATLAB/R2017b/bin
 eval $(thefuck --alias)
 
-source /opt/intel/parallel_studio_xe_2018/bin/psxevars.sh > /dev/null
+# source /opt/intel/parallel_studio_xe_2018/bin/psxevars.sh > /dev/null
 source /opt/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64
-source /opt/intel/vtune_amplifier_2018/amplxe-vars.sh > /dev/null
+source /opt/intel/vtune_amplifier/amplxe-vars.sh quiet
 
