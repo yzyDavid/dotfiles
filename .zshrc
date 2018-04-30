@@ -106,13 +106,15 @@ alias oppy='optirun python'
 # alias yarn=tyarn
 alias rm='rm -i'
 # alias gacp='ga . && gc && gp'
-alias em=emacs
+alias em='emacs &'
 
 export VISUAL="vim"
 
 # for Konsole or I dont know whatever, LANG should be set as C to use english cmdline.
 # export LANG="en_US.UTF-8"
 export LANG=C
+
+export FUNCNEST=5000
 
 #if [ -n "$WINDOWID" ]; then
 #	TRANSPARENCY_HEX=$(printf 0x%x $((0xffffffff * 40 / 100)))

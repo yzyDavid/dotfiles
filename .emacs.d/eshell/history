@@ -9,3 +9,6 @@ git push
 git pull
 git commit
 cat .gitignore 
+ls
+sudo ls
+ls
