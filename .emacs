@@ -14,6 +14,8 @@
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ts$" . web-mode))
 
 ;;; C-c as general purpose escape key sequence.
    ;;;
@@ -44,6 +46,7 @@
       (indent-according-to-mode)))
 
 (setq company-idle-delay 0)
+(global-linum-mode 1)
 
 ;;; Emacs GUI autogen part:
 
