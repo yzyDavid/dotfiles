@@ -10,12 +10,21 @@
 
 (setq make-backup-files nil)
 (setq column-number-mode t)
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
+(global-hl-line-mode t)
+
+(setq initial-scratch-message "The BELIEF is cheaper than 200 CNY per day.")
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tsx$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.ts$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.htm$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css$" . web-mode))
+
+(require 'ox-md nil t)
 
 ;;; C-c as general purpose escape key sequence.
    ;;;
@@ -47,6 +56,21 @@
 
 (setq company-idle-delay 0)
 (global-linum-mode 1)
+
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8-unix)
+
+;; set a default font
+(when (member "DejaVu Sans Mono" (font-family-list))
+  (set-face-attribute 'default nil :font "DejaVu Sans Mono"))
+
+;; specify font for all unicode characters
+(when (member "Symbola" (font-family-list))
+  (set-fontset-font t 'unicode "Symbola" nil 'prepend))
+
+;; specify font for chinese characters using default chinese font on linux
+(when (member "WenQuanYi Micro Hei" (font-family-list))
+  (set-fontset-font t '(#x4e00 . #x9fff) "WenQuanYi Micro Hei" ))
 
 ;;; Emacs GUI autogen part:
 
