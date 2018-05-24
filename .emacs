@@ -37,7 +37,9 @@
       ;; This is the best way I could infer for now to have C-c work during evil-read-key.
       ;; Note: As long as I return [escape] in normal-state, I don't need this.
       ;;((eq overriding-terminal-local-map evil-read-key-map) (keyboard-quit) (kbd ""))
-      (t (kbd "C-g"))))
+      (t (kbd "C-c"))))
+      ;; the line above was like below, I changed it so in Emacs mode the C-c key is not changed to C-g.
+      ;; (t (kbd "C-g"))))
    (define-key key-translation-map (kbd "C-c") 'my-esc)
    ;; Works around the fact that Evil uses read-event directly when in operator state, which
    ;; doesn't use the key-translation-map.
