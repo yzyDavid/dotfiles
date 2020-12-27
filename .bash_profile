@@ -6,5 +6,3 @@ if [[ -f ~/.bashrc ]] ; then
 	. ~/.bashrc
 fi
 
-# opam configuration
-test -r /home/yzy/.opam/opam-init/init.sh && . /home/yzy/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

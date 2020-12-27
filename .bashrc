@@ -21,8 +21,6 @@ export LESSCHARSET=utf8
 # export LANG=zh_CN.UTF-8
 
 alias mk=make
-alias glvm="sudo eselect opengl set xorg-x11"
-alias glnv="sudo eselect opengl set nvidia"
 
 alias rm='rm -i'
 
@@ -44,9 +42,9 @@ alias pc='proxychains -q'
 alias code=visual-studio-code
 alias emacs='emacsclient -t'
 
-export PATH=$HOME/.local/bin:$PATH
 export PATH=$PATH:$HOME/go/bin
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # golang, do not export it at env.d/
 # or root build would crash.
@@ -57,3 +55,8 @@ export GOPROXY=https://goproxy.io
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# opam configuration
+test -r /home/yzy/.opam/opam-init/init.sh && . /home/yzy/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+export PATH=/home/yzy/.tiup/bin:$PATH
